@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dr. Husniddin Tuxtayev — urolog-androlog, Buxoro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script>document.documentElement.classList.add("js")</script>
+<header class="nav"><div class="wrap">
+<a class="logo" href="#top" id="brand"></a>
+<nav id="menu"></nav>
+<div class="lang" id="lang"><button type="button" class="on" data-lang="uz">Uz</button><button type="button" data-lang="uz-cyrl">Ўз</button><button type="button" data-lang="ru">Ru</button></div>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap"><div class="hero-copy">
+<div class="guarantee"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z"/><path d="M8.5 12l2.5 2.5L15.5 9.5"/></svg><b data-i18n="gBold">13 yil</b> <span data-i18n="gRest">tajriba</span></div>
+<h1 id="heroTitle"></h1>
+<p class="muted" id="heroText" style="max-width:52ch"></p>
+<p><button class="btn" type="button" data-book data-i18n="book">Konsultatsiyaga yozilish</button> <a class="btn ghost" href="#services" data-i18n="services">Xizmatlar</a></p>
+</div></div></section>
+
+<section id="doctors"><div class="wrap"><h2 data-i18n="doctor">Shifokor</h2><div class="slider" id="docs"></div></div></section>
+
+<section id="services"><div class="wrap"><h2 data-i18n="services">Xizmatlar</h2><div class="grid" id="serviceGrid"></div></div></section>
+
+<section id="contact"><div class="wrap">
+<span class="pill" data-i18n="pill">ALOQA</span>
+<h2 data-i18n="hContact">Qabulga yoziling</h2>
+<p class="muted lead2" data-i18n="leadContact">Sog‘lig‘ingizga e’tibor berishni bugundan boshlang. Konsultatsiya uchun biz bilan bog‘laning.</p>
+<div class="contact-grid">
+<div class="contact-info">
+<ul class="clist" id="clist"></ul>
+<div class="cbtns" id="cbtns"></div>
+</div>
+<form id="contactForm" class="aform">
+<h3 data-i18n="formTitle">Ariza qoldiring</h3>
+<label for="n2" data-i18n="lName">Ism-familiyangiz</label><input id="n2" required autocomplete="name">
+<label for="p2" data-i18n="lPhone">Telefon raqamingiz</label><input id="p2" type="tel" required placeholder="+998" autocomplete="tel">
+
+<label id="lS2" data-i18n="lService">Xizmat turi</label>
+<div class="dd" id="dd-svc"><input type="hidden" id="s2" value=""><button type="button" class="dd-btn" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="lS2"><span class="dd-val"></span></button><ul class="dd-list" role="listbox" hidden></ul></div>
+
+<label id="lD2" data-i18n="lDate">Qulay qabul sanasi</label>
+<div class="dp" id="dp"><input type="hidden" id="dt2" value=""><button type="button" class="dd-btn" id="dpBtn" aria-haspopup="dialog" aria-expanded="false" aria-labelledby="lD2"><span class="dd-val"></span></button><div class="dp-pop" id="dpPop" hidden></div></div>
+
+<label for="m2" data-i18n="lMsg">Qo‘shimcha xabar (ixtiyoriy)</label><textarea id="m2" rows="4"></textarea>
+<p><button class="btn" type="submit" data-i18n="submitContact">Qabulga yozilish</button></p>
+<p class="fine" data-i18n="fine">Ma’lumotlar faqat yozilish uchun ishlatiladi.</p>
+<div class="ok" id="ok2" data-i18n="okContact">Rahmat! Telegram ochiladi, xabarni yuboring.</div>
+</form>
+</div>
+</div></section>
+
+<section id="location"><div class="wrap">
+<h2 data-i18n="addrH">Manzil</h2>
+<iframe class="cmap" data-i18n-title="addrH" title="Manzil xaritada" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Buxoro&amp;output=embed"></iframe>
+</div></section>
+</main>
+
+<footer class="sf"><div class="wrap">
+<div class="sf-brand" id="brand2"></div>
+<p class="sf-role" id="sfRole" data-i18n="role">Urolog-androlog</p>
+<h4 data-i18n="pagesH">Sahifalar</h4><nav class="sf-col" id="sfNav"></nav>
+<h4 data-i18n="contactsH">Aloqa</h4><div class="sf-col" id="sfContact"></div>
+<h4 data-i18n="socialH">Ijtimoiy tarmoqlar</h4><div class="sf-col" id="sfSocial"></div>
+<div class="sf-copy" id="sfCopy"></div>
+</div></footer>
+
+<div class="reader" id="reader" role="dialog" aria-modal="true" aria-labelledby="rt" hidden>
+<div class="reader-bar"><button class="reader-close" id="readerClose" type="button"></button></div>
+<article class="reader-body"><h1 id="rt"></h1><img class="reader-img" id="rimg" alt="" hidden><div id="rbody"></div></article>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="box">
+<button class="x" type="button" id="close" data-i18n-aria="close" aria-label="Yopish">×</button>
+<h3 id="mt" data-i18n="bookTitle">Konsultatsiyaga yozilish</h3>
+<form id="bookForm">
+<label for="n" data-i18n="mName">Ismingiz</label><input id="n" required>
+<label for="p" data-i18n="mPhone">Telefon</label><input id="p" type="tel" required placeholder="+998">
+<label id="lD" data-i18n="mDoctor">Shifokor</label>
+<div class="dd" id="dd-doc"><input type="hidden" id="d" value=""><button type="button" class="dd-btn" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="lD"><span class="dd-val"></span></button><ul class="dd-list" role="listbox" hidden></ul></div>
+<p><button class="btn" type="submit" data-i18n="mSubmit">Yozilish</button></p>
+<div class="ok" id="ok" data-i18n="mOk">So‘rov yuborildi. Tez orada qo‘ng‘iroq qilamiz.</div>
+</form>
+</div></div>
+
+<script src="js/config.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
